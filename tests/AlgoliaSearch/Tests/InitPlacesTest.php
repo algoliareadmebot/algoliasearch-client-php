@@ -2,7 +2,6 @@
 
 namespace AlgoliaSearch\Tests;
 
-use AlgoliaSearch\AlgoliaException;
 use AlgoliaSearch\Client;
 
 class InitPlacesTest extends AlgoliaSearchTestCase

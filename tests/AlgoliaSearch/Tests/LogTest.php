@@ -2,13 +2,11 @@
 
 namespace AlgoliaSearch\Tests;
 
-use AlgoliaSearch\AlgoliaException;
 use AlgoliaSearch\Client;
 
 class LogTest extends AlgoliaSearchTestCase
 {
     private $client;
-    private $index;
     
     protected function setUp()
     {

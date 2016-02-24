@@ -19,7 +19,7 @@ class MoveIndexTest extends AlgoliaSearchTestCase
             // not fatal
         }
         try {
-            $task = $this->client->deleteIndex($this->safe_name('àlgol?à2-php'));
+            $this->client->deleteIndex($this->safe_name('àlgol?à2-php'));
             //$this->client->waitTask($task['taskID']);
         } catch (AlgoliaException $e) {
             // CopyIndex does not exist

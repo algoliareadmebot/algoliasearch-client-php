@@ -20,7 +20,7 @@ class ListIndexesTest extends AlgoliaSearchTestCase
             // not fatal
         }
         try {
-            $task = $this->client->deleteIndex($this->safe_name('àlgol?à2-php'));
+            $this->client->deleteIndex($this->safe_name('àlgol?à2-php'));
         } catch (AlgoliaException $e) {
             // ListTest2 does not exist
         }

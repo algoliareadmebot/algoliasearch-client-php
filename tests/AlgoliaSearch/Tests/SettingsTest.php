@@ -41,7 +41,7 @@ class SettingsTest extends AlgoliaSearchTestCase
 
     public function testSearchFacet()
     {
-        $res = $this->index->addObjects(array(
+        $this->index->addObjects(array(
             array("firstname" => "Robin"),
             array("firstname" => "Robert")
         ));

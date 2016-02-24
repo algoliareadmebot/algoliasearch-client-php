@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright (c) 2013 Algolia
  * http://www.algolia.com/
@@ -23,19 +24,27 @@
  *
  *
  */
+
 namespace AlgoliaSearch;
 
 class IndexBrowser implements \Iterator
 {
-    private $client;
-    private $urlIndexName;
     private $query;
     private $position;
     private $hit;
-    private $context;
     private $params;
     private $answer;
+    private $index;
+    private $cursor;
 
+    /**
+     * IndexBrowser constructor.
+     *
+     * @param Index $index
+     * @param       $query
+     * @param       $params
+     * @param       $cursor
+     */
     public function __construct(Index $index, $query, $params = null, $cursor = null)
     {
         $this->index = $index;
@@ -47,21 +56,33 @@ class IndexBrowser implements \Iterator
         $this->doQuery($cursor);
     }
 
+    /**
+     * @return mixed
+     */
     public function current()
     {
         return $this->hit;
     }
 
+    /**
+     * @return mixed
+     */
     public function next()
     {
         return $this->hit;
     }
 
+    /**
+     * @return int
+     */
     public function key()
     {
         return $this->position;
     }
 
+    /**
+     * @return bool
+     */
     public function valid()
     {
         do {
@@ -87,14 +108,20 @@ class IndexBrowser implements \Iterator
     public function rewind()
     {
         $this->cursor = null;
-        $this->pos = 0;
+        $this->position = 0;
     }
 
+    /**
+     * @return mixed
+     */
     public function cursor()
     {
         return $this->answer['cursor'];
     }
 
+    /**
+     * @param $cursor
+     */
     private function doQuery($cursor = null)
     {
         if ($cursor !== null) {
