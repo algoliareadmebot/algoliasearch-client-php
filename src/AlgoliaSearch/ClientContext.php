@@ -85,7 +85,7 @@ class ClientContext
         $this->endUserIP = null;
         $this->algoliaUserToken = null;
         $this->rateLimitAPIKey = null;
-        $this->headers = array();
+        $this->headers = [];
     }
 
     /**

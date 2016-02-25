@@ -7,6 +7,9 @@ $finder = Symfony\CS\Finder\DefaultFinder::create()
 return Symfony\CS\Config\Config::create()
     ->setUsingCache(true)
     ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
-    ->fixers(array('align_double_arrow'))
+    ->fixers(array(
+        'align_double_arrow',
+        'short_array_syntax'
+    ))
     ->finder($finder)
 ;
