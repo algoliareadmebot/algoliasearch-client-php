@@ -9,7 +9,8 @@ return Symfony\CS\Config\Config::create()
     ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
     ->fixers(array(
         'align_double_arrow',
-        'short_array_syntax'
+        'short_array_syntax',
+        '-multiline_array_trailing_comma'
     ))
     ->finder($finder)
 ;
