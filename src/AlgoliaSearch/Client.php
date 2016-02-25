@@ -640,7 +640,7 @@ class Client
             if ($userToken != null && strlen($userToken) > 0) {
                 $queryParameters['userToken'] = $userToken;
             }
-            $urlEncodedQuery = self::buildQuery($queryParameters);
+            $urlEncodedQuery = static::buildQuery($queryParameters);
         } else {
             if (strpos($query, '=') === false) {
                 // String of tags
@@ -649,7 +649,7 @@ class Client
                 if ($userToken != null && strlen($userToken) > 0) {
                     $queryParameters['userToken'] = $userToken;
                 }
-                $urlEncodedQuery = self::buildQuery($queryParameters);
+                $urlEncodedQuery = static::buildQuery($queryParameters);
             } else {
                 // url encoded query
                 $urlEncodedQuery = $query;
