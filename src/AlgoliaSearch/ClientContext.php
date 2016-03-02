@@ -31,23 +31,58 @@ use Exception;
 
 class ClientContext
 {
+    /**
+     * @var string
+     */
     public $applicationID;
+
+    /**
+     * @var string
+     */
     public $apiKey;
+
+    /**
+     * @var array
+     */
     public $readHostsArray;
+
+    /**
+     * @var array
+     */
     public $writeHostsArray;
+
+    /**
+     * @var resource
+     */
     public $curlMHandle;
+
+    /**
+     * @var string
+     */
     public $adminAPIKey;
+
+    /**
+     * @var string
+     */
     public $endUserIP;
+
+    /**
+     * @var string
+     */
     public $algoliaUserToken;
+
+    /**
+     * @var int
+     */
     public $connectTimeout;
 
     /**
      * ClientContext constructor.
      *
-     * @param      $applicationID
-     * @param      $apiKey
-     * @param      $hostsArray
-     * @param bool $placesEnabled
+     * @param string $applicationID
+     * @param string $apiKey
+     * @param array  $hostsArray
+     * @param bool   $placesEnabled
      *
      * @throws Exception
      */
@@ -89,7 +124,7 @@ class ClientContext
     }
 
     /**
-     * @param $placesEnabled
+     * @param bool $placesEnabled
      *
      * @return array
      */
@@ -125,6 +160,9 @@ class ClientContext
         ];
     }
 
+    /**
+     * Closes eventually opened curl handles.
+     */
     public function __destruct()
     {
         if ($this->curlMHandle != null) {

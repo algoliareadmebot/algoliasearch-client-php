@@ -30,8 +30,8 @@ namespace AlgoliaSearch;
 class PlacesIndex
 {
     /**
-     * @param        $context
-     * @param Client $client
+     * @param ClientContext $context
+     * @param Client        $client
      */
     public function __construct($context, Client $client)
     {
@@ -40,7 +40,7 @@ class PlacesIndex
     }
 
     /**
-     * @param $query
+     * @param string     $query
      * @param array|null $args
      *
      * @return mixed

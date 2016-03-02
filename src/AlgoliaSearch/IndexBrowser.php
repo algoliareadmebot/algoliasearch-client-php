@@ -29,21 +29,48 @@ namespace AlgoliaSearch;
 
 class IndexBrowser implements \Iterator
 {
+    /**
+     * @var string
+     */
     private $query;
+
+    /**
+     * @var int
+     */
     private $position;
+
+    /**
+     * @var array
+     */
     private $hit;
+
+    /**
+     * @var array
+     */
     private $params;
+
+    /**
+     * @var array
+     */
     private $answer;
+
+    /**
+     * @var Index
+     */
     private $index;
+
+    /**
+     * @var int
+     */
     private $cursor;
 
     /**
      * IndexBrowser constructor.
      *
-     * @param Index $index
-     * @param       $query
-     * @param       $params
-     * @param       $cursor
+     * @param Index      $index
+     * @param string     $query
+     * @param array|null $params
+     * @param int|null   $cursor
      */
     public function __construct(Index $index, $query, $params = null, $cursor = null)
     {
@@ -112,7 +139,7 @@ class IndexBrowser implements \Iterator
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function cursor()
     {
@@ -120,7 +147,7 @@ class IndexBrowser implements \Iterator
     }
 
     /**
-     * @param $cursor
+     * @param int $cursor
      */
     private function doQuery($cursor = null)
     {
