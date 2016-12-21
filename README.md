@@ -206,7 +206,11 @@ var_dump($index->search('or'));
 var_dump($index->search('jim'));
 ```
 
+<<<<<<< HEAD
+**Note:** If you are building a web application, you may be more interested in using our [JavaScript client](https://github.com/algolia/algoliasearch-client-js) to perform queries.
+=======
 **Note:** If you are building a web application, you may be more interested in using our [JavaScript client](https://github.com/algolia/algoliasearch-client-javascript) to perform queries.
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 It brings two benefits:
   * Your users get a better response time by not going through your servers
@@ -249,7 +253,11 @@ function searchCallback(err, content) {
 
 ## Search in an index - `search` 
 
+<<<<<<< HEAD
+**Notes:** If you are building a web application, you may be more interested in using our [JavaScript client](https://github.com/algolia/algoliasearch-client-js) to perform queries. It brings two benefits:
+=======
 **Notes:** If you are building a web application, you may be more interested in using our [JavaScript client](https://github.com/algolia/algoliasearch-client-javascript) to perform queries. It brings two benefits:
+>>>>>>> refs/remotes/algoliareadmebot/master
   * Your users get a better response time by not going through your servers
   * It will offload unnecessary tasks from your servers.
 
@@ -484,6 +492,10 @@ Parameters that can also be used in a setSettings also have the `indexing` [scop
 - [numericFilters](#numericfilters) `search`
 - [tagFilters (deprecated)](#tagfilters-deprecated) `search`
 - [analytics](#analytics) `search`
+<<<<<<< HEAD
+- [analyticsTags](#analyticstags) `search`
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 ## Search in indices - `multipleQueries` 
 
@@ -547,6 +559,9 @@ $index->getObjects(['myID1', 'myID2']);
 
 ## Search for facet values - `searchForFacetValues` 
 
+<<<<<<< HEAD
+# Indexing
+=======
 When a facet can take many different values, it can be useful to search within them. The typical use case is to build
 an autocomplete menu for facet refinements, but of course other use cases may apply as well.
 
@@ -631,12 +646,16 @@ $index->searchForFacetValues("category", "phone", $query);
     ]
 }
 ```
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 
 # Indexing
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ## Add Objects - `addObjects` 
 
 Each entry in an index has a unique identifier called `objectID`. There are two ways to add an entry to the index:
@@ -685,7 +704,11 @@ $res = $index->addObjects(
 );
 ```
 
+<<<<<<< HEAD
+To add a single object, use the `[Add Objects](/doc/api-client/php/indexing#add-objects)` method:
+=======
 To add a single object, use the [Add Objects](#add-objects) method:
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 ```php
 <?php
@@ -857,7 +880,11 @@ You can delete objects using their `objectID`:
 $res = $index->deleteObjects(["myID1", "myID2"]);
 ```
 
+<<<<<<< HEAD
+To delete a single object, you can use the `[Delete objects](/doc/api-client/php/indexing#delete-objects)` method:
+=======
 To delete a single object, you can use the `[Delete objects](#delete-objects)` method:
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 ```php
 <?php
@@ -1012,7 +1039,10 @@ Parameters that can be overridden at search time also have the `search` [scope](
 # Parameters
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ## Overview
 
 ### Scope
@@ -1119,9 +1149,18 @@ They are three scopes:
 - [numericFilters](#numericfilters) `search`
 - [tagFilters (deprecated)](#tagfilters-deprecated) `search`
 - [analytics](#analytics) `search`
+<<<<<<< HEAD
+- [analyticsTags](#analyticstags) `search`
 
 ## Search
 
+<div class='api-client-parameter'>
+
+=======
+
+## Search
+
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### query
 
 - scope: `search`
@@ -1135,6 +1174,11 @@ If no query parameter is set, the textual search will match with all the objects
 
 ## Attributes
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### searchableAttributes
 
 - scope: `settings`
@@ -1161,6 +1205,11 @@ To get a full description of how the ranking works, you can have a look at our [
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### attributesForFaceting
 
 - scope: `settings`
@@ -1170,12 +1219,19 @@ The list of attributes you want to use for faceting.
 All strings within these attributes will be extracted and added as facets.
 If set to `null`, no attribute is used for faceting.
 
+<<<<<<< HEAD
+</div>
+
+<div class='api-client-parameter'>
+
+=======
 If you only need to filter on a given facet, you can specify filterOnly(attributeName). It reduces the size of the index and the build time.
 
 If you want to search inside values of a given facet (using the [Search for facet values](#search-for-facet-values) method) you need to specify searchable(attributeName).
 
 </div>
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### unretrievableAttributes
 
 - scope: `settings`
@@ -1187,6 +1243,11 @@ and/or ranking but cannot be retrieved.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### attributesToRetrieve
 
 - scope: `settings` `search`
@@ -1204,6 +1265,11 @@ You can also use `*` to retrieve all values when an **attributesToRetrieve** set
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### restrictSearchableAttributes
 
 - scope: `search`
@@ -1212,13 +1278,21 @@ You can also use `*` to retrieve all values when an **attributesToRetrieve** set
 
 List of attributes you want to use for textual search (must be a subset of the `searchableAttributes` index setting).
 
+<<<<<<< HEAD
+=======
 Attributes are separated with a comma such as `"name,address"`.
 You can also use a string array encoding (for example `["name","address"]` ).
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 </div>
 
 ## Ranking
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### ranking
 
 - scope: `settings`
@@ -1245,6 +1319,11 @@ To get a full description of how the Ranking works, you can have a look at our [
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### customRanking
 
 - scope: `settings`
@@ -1263,6 +1342,11 @@ you can have a look at our [Ranking guide](https://www.algolia.com/doc/guides/re
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### replicas
 
 - scope: `settings`
@@ -1284,6 +1368,11 @@ update replica indices with the same operations.
 
 ## Filtering / Faceting
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### filters
 
 - scope: `search`
@@ -1305,6 +1394,11 @@ For example: `public OR user_42` will translate to `_tags:public OR _tags:user_4
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### facets
 
 - scope: `search`
@@ -1341,6 +1435,11 @@ the attribute `exhaustiveFacetsCount` in the response is true when the count is 
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### maxValuesPerFacet
 
 - scope: `settings` `search`
@@ -1356,6 +1455,12 @@ For example, `maxValuesPerFacet=10` will retrieve a maximum of 10 values per fac
 
 </div>
 
+<<<<<<< HEAD
+## Highlighting / Snippeting
+
+<div class='api-client-parameter'>
+
+=======
 ### facetFilters
 
 - scope: `search`
@@ -1378,6 +1483,7 @@ For example, `[["category:Book","category:Movie"],"author:John%20Doe"]`.
 
 ## Highlighting / Snippeting
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### attributesToHighlight
 
 - scope: `settings` `search`
@@ -1401,6 +1507,11 @@ A matchLevel is returned for each highlighted attribute and can contain:
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### attributesToSnippet
 
 - scope: `settings` `search`
@@ -1411,6 +1522,11 @@ If set to null, no snippet is computed.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### highlightPreTag
 
 - scope: `settings` `search`
@@ -1421,6 +1537,11 @@ Specify the string that is inserted before the highlighted parts in the query re
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### highlightPostTag
 
 - scope: `settings` `search`
@@ -1431,6 +1552,11 @@ Specify the string that is inserted after the highlighted parts in the query res
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### snippetEllipsisText
 
 - scope: `settings` `search`
@@ -1443,6 +1569,11 @@ Defaults to an empty string for all accounts created before 10/2/2016, and to `â
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### restrictHighlightAndSnippetArrays
 
 - scope: `settings` `search`
@@ -1455,6 +1586,11 @@ If set to true, restrict arrays in highlights and snippets to items that matched
 
 ## Pagination
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### page
 
 - scope: `search`
@@ -1467,6 +1603,11 @@ Pagination parameter used to select the page to retrieve.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### hitsPerPage
 
 - scope: `settings` `search`
@@ -1477,6 +1618,11 @@ Pagination parameter used to select the number of hits per page.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### offset
 
 - scope: `search`
@@ -1488,6 +1634,11 @@ Offset of the first hit to return (zero-based).
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### length
 
 - scope: `search`
@@ -1499,6 +1650,11 @@ Offset of the first hit to return (zero-based).
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### paginationLimitedTo
 
 - scope: `settings`
@@ -1515,6 +1671,11 @@ A big value will also make it very easy for anyone to download all your dataset.
 
 ## Typos
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### minWordSizefor1Typo
 
 - scope: `settings` `search`
@@ -1525,6 +1686,11 @@ The minimum number of characters needed to accept one typo.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### minWordSizefor2Typos
 
 - scope: `settings` `search`
@@ -1535,6 +1701,11 @@ The minimum number of characters needed to accept two typos.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### typoTolerance
 
 - scope: `settings` `search`
@@ -1550,6 +1721,11 @@ This option allows you to control the number of typos allowed in the result set:
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### allowTyposOnNumericTokens
 
 - scope: `settings` `search`
@@ -1560,6 +1736,11 @@ If set to false, disables typo tolerance on numeric tokens (numbers).
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### ignorePlurals
 
 - scope: `settings` `search`
@@ -1588,20 +1769,39 @@ Telugu=`te`, Tagalog=`tl`, Tswana=`tn`, Turkish=`tr`, Tatar=`tt`,
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+### disableTypoToleranceOnAttributes
+
+- scope: `settings` `search`
+- type: `string`
+- default: ""
+=======
 ### disableTypoToleranceOnAttributes
 
 - scope: `settings` `search`
 - type: `array of strings` `string`
 - default: []
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 List of attributes on which you want to disable typo tolerance
 (must be a subset of the `searchableAttributes` index setting).
 
 Attributes are separated with a comma such as `"name,address"`.
+<<<<<<< HEAD
+You can also use JSON string array encoding such as `encodeURIComponent("[\"name\",\"address\"]")`.
+
+</div>
+
+<div class='api-client-parameter'>
+
+=======
 You can also use a string array encoding (for example `["name","address"]` ).
 
 </div>
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### separatorsToIndex
 
 - scope: `settings`
@@ -1646,6 +1846,11 @@ Geo search requires that you provide at least one geo location in each record at
 }
 ```
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### aroundLatLng
 
 - scope: `search`
@@ -1664,6 +1869,11 @@ For example, `aroundLatLng=47.316669,5.016670`.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### aroundLatLngViaIP
 
 - scope: `search`
@@ -1684,6 +1894,11 @@ will be considered as identical in the ranking for the "geo" ranking parameter (
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### aroundRadius
 
 - scope: `search`
@@ -1700,6 +1915,11 @@ this option will be faster than specifying a big integer value.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### aroundPrecision
 
 - scope: `search`
@@ -1713,6 +1933,11 @@ identical in the ranking for the `geo` ranking parameter (same for 100-199, 200-
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### minimumAroundRadius
 
 - scope: `search`
@@ -1724,6 +1949,11 @@ You can retrieve the computed radius in the `automaticRadius` attribute of the a
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### insideBoundingBox
 
 - scope: `search`
@@ -1741,6 +1971,11 @@ For example: instead of having 4 values you can pass 8 to search inside the UNIO
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### insidePolygon
 
 - scope: `search`
@@ -1759,6 +1994,11 @@ Search entries inside a given area defined by a set of points
 
 ## Query Strategy
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### queryType
 
 - scope: `settings`
@@ -1775,6 +2015,11 @@ No query word is interpreted as a prefix. This option is not recommended.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### removeWordsIfNoResults
 
 - scope: `settings` `search`
@@ -1798,6 +2043,11 @@ No specific processing is done when a query does not return any results (default
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### advancedSyntax
 
 - scope: `settings` `search`
@@ -1815,6 +2065,11 @@ For example, `search -engine` will retrieve records containing `search` but not 
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### optionalWords
 
 - scope: `settings` `search`
@@ -1825,6 +2080,11 @@ A string that contains the comma separated list of words that should be consider
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### removeStopWords
 
 - scope: `settings` `search`
@@ -1853,6 +2113,11 @@ For most use cases, it is better to not use this feature as people search by key
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### disablePrefixOnAttributes
 
 - scope: `seetings`
@@ -1867,6 +2132,11 @@ This setting is useful on attributes that contain string that should not be matc
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### disableExactOnAttributes
 
 - scope: `settings`
@@ -1878,6 +2148,11 @@ List of attributes on which you want to disable the computation of `exact` crite
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### exactOnSingleWordQuery
 
 - scope: `settings` `search`
@@ -1892,6 +2167,11 @@ This parameter control how the `exact` ranking criterion is computed when the qu
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### alternativesAsExact
 
 - scope: `setting` `search`
@@ -1908,6 +2188,11 @@ Specify the list of approximation that should be considered as an exact match in
 
 ## Advanced
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### attributeForDistinct
 
 - scope: `settings`
@@ -1927,6 +2212,9 @@ you can have a look at our [guide on distinct](https://www.algolia.com/doc/searc
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+=======
 ### analyticsTags
 
 - scope: `search`
@@ -1935,6 +2223,7 @@ you can have a look at our [guide on distinct](https://www.algolia.com/doc/searc
 If set, tag your query with the specified identifiers. Tags can then be used in the Analytics to analyze a subset of searches only.
 
 </div>
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 ### synonyms
 
@@ -1946,6 +2235,11 @@ If set to `false`, the search will not use the synonyms defined for the targeted
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### replaceSynonymsInHighlight
 
 - scope: `settings` `search`
@@ -1956,6 +2250,11 @@ If set to `false`, words matched via synonym expansion will not be replaced by t
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### placeholders
 
 - scope: `settings`
@@ -1980,6 +2279,11 @@ For example:
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### altCorrections
 
 - scope: `settings`
@@ -2005,6 +2309,11 @@ For example:
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### minProximity
 
 - scope: `settings` `search`
@@ -2022,6 +2331,11 @@ will get the same proximity score, even if the second contains a word between th
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### responseFields
 
 - scope: `settings` `search`
@@ -2042,6 +2356,11 @@ Some fields cannot be filtered out:
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### distinct
 
 - scope: `settings` `search`
@@ -2063,6 +2382,11 @@ you can have a look at our [guide on distinct](https://www.algolia.com/doc/searc
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### getRankingInfo
 
 - scope: `search`
@@ -2074,6 +2398,11 @@ the result hits will contain ranking information in the **_rankingInfo** attribu
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### numericAttributesForFiltering
 
 - scope: `settings`
@@ -2091,6 +2420,11 @@ The other operators will be disabled.
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### allowCompressionOfIntegerArray
 
 - scope: `settings`
@@ -2105,13 +2439,23 @@ When enabled, the integer array is reordered to reach a better compression ratio
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+### numericFilters (deprecated)
+=======
 ### numericFilters
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 - scope: `search`
 - type: `array of strings`
 - default: []
 
+<<<<<<< HEAD
+*This parameter is deprecated. Please use [filters](#filters) instead.*
+=======
 *If you are not using this parameter to generate filters programatically you should use [filters](#filters) instead*
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 A string that contains the comma separated list of numeric filters you want to apply.
 The filter syntax is `attributeName` followed by `operand` followed by `value`.
@@ -2132,23 +2476,44 @@ You can also use a string array encoding (for example `numericFilters: ["price>1
 
 </div>
 
+<<<<<<< HEAD
+<div class='api-client-parameter'>
+
+### facetFilters (deprecated)
+=======
 ### tagFilters (deprecated)
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 - scope: `search`
 - type: `string`
 - default: ""
 
+<<<<<<< HEAD
+*This parameter is deprecated. Please use [filters](#filters) instead.*
+
+Filter the query with a list of facets. Facets are separated by commas and is encoded as `attributeName:value`.
+To OR facets, you must add parentheses.
+=======
 **This parameter is deprecated. You should use [filters](#filters) instead.**
 
 Filter the query by a set of tags.
 
 You can AND tags by separating them with commas.
 To OR tags, you must add parentheses.
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 For example, `tagFilters=tag1,(tag2,tag3)` means *tag1 AND (tag2 OR tag3)*.
 
 You can also use a string array encoding.
 
+<<<<<<< HEAD
+For example, `[["category:Book","category:Movie"],"author:John%20Doe"]`.
+
+</div>
+
+<div class='api-client-parameter'>
+
+=======
 For example, `tagFilters: ["tag1",["tag2","tag3"]]` means *tag1 AND (tag2 OR tag3)*.
 
 Negations are supported via the `-` operator, prefixing the value.
@@ -2161,6 +2526,7 @@ For example `{"_tags":["tag1","tag2"]}`.
 
 </div>
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ### analytics
 
 - scope: `search`
@@ -2169,6 +2535,20 @@ For example `{"_tags":["tag1","tag2"]}`.
 
 If set to false, this query will not be taken into account in the analytics feature.
 
+<<<<<<< HEAD
+</div>
+
+<div class='api-client-parameter'>
+
+### analyticsTags
+
+- scope: `search`
+- type: `array of strings`
+
+If set, tag your query with the specified identifiers. Tags can then be used in the Analytics to analyze a subset of searches only.
+
+=======
+>>>>>>> refs/remotes/algoliareadmebot/master
 </div>
 
 
@@ -2294,11 +2674,19 @@ Managing and especially creating those keys requires a call to the API.
 
 We have several methods to manage them:
 
+<<<<<<< HEAD
+- [Add user key](/doc/api-client/php/advanced#add-user-key)
+- [Update user key](/doc/api-client/php/advanced#update-user-key)
+- [Delete user key](/doc/api-client/php/advanced#delete-user-key)
+- [List api keys](/doc/api-client/php/advanced#list-api-keys)
+- [Get key permissions](/doc/api-client/php/advanced#get-key-permissions)
+=======
 - [Add user key](#add-user-key)
 - [Update user key](#update-user-key)
 - [Delete user key](#delete-user-key)
 - [List api keys](#list-api-keys)
 - [Get key permissions](#get-key-permissions)
+>>>>>>> refs/remotes/algoliareadmebot/master
 
 ## Generate key - `generateSecuredApiKey` 
 
@@ -2717,8 +3105,11 @@ Add a validity period. The key will be valid for a specific period of time (in s
 
 Specify the maximum number of API calls allowed from an IP address per hour. Each time an API call is performed with this key, a check is performed. If the IP at the source of the call did more than this number of calls in the last hour, a 403 code is returned. Defaults to 0 (no rate limit). This parameter can be used to protect you from attempts at retrieving your entire index contents by massively querying the index.
 
+<<<<<<< HEAD
+=======
   Note: If you are sending the query through your servers, you must use the `enableRateLimitForward("TheAdminAPIKey", "EndUserIP", "APIKeyWithRateLimit")` function to enable rate-limit.
 
+>>>>>>> refs/remotes/algoliareadmebot/master
 ##### maxHitsPerQuery
 
 Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited). This parameter can be used to protect you from attempts at retrieving your entire index contents by massively querying the index.
